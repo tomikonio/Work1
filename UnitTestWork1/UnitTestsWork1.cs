@@ -53,5 +53,14 @@ namespace UnitTestWork1
             }
             return true;
         }
+
+        [TestMethod]
+        public void QuickSortTest()
+        {
+            var form = new Form1();
+            form.addListview();
+            form.Quicksort(0,form.workers.Length-1);
+            form.sortTable();
+        }
     }
 }

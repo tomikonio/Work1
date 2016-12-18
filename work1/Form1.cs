@@ -123,18 +123,18 @@ namespace work1
 
         }
 
-        public void quicksort(/*Worker[] workerArray*/ int low, int high)
+        public void Quicksort(/*Worker[] workerArray*/ int low, int high)
         {
             int pivot = 0;
             if (low < high)
             {
-                pivot = partition(low, high);
-                quicksort(low, pivot - 1);
-                quicksort(pivot + 1, high);
+                pivot = Partition(low, high);
+                Quicksort(low, pivot - 1);
+                Quicksort(pivot + 1, high);
             }
         }
 
-        private int partition(int low, int high)
+        private int Partition(int low, int high)
         {
             int x = workers[high].salary;
             int i = low - 1;
@@ -143,15 +143,15 @@ namespace work1
                 if (workers[j].salary <= x)
                 {
                     i++;
-                    swap(i, j);
+                    Swap(i, j);
                 }
             }
-            swap(i + 1, high);
+            Swap(i + 1, high);
             return i + 1;
 
         }
 
-        private void swap(int index1, int index2)
+        private void Swap(int index1, int index2)
         {
             Worker swp;
             swp = workers[index1];
@@ -162,7 +162,7 @@ namespace work1
         private void button3_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            quicksort(0, workers.Length - 1);
+            Quicksort(0, workers.Length - 1);
             sortTable();
         }
     }
