@@ -53,7 +53,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(324, 348);
+            this.button2.Location = new System.Drawing.Point(444, 348);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 121);
             this.button2.TabIndex = 1;
@@ -67,8 +67,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 121);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "Quicksort";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // listView1
             // 

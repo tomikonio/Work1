@@ -74,7 +74,7 @@ namespace work1
 
             
 
-            for (int write = 0; write < workers.Length; write++)
+            for (int write = 1; write < workers.Length; write++)
             {
                 for (int sort = 0; sort < workers.Length - 1; sort++)
                 {
@@ -121,6 +121,49 @@ namespace work1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void quicksort(/*Worker[] workerArray*/ int low, int high)
+        {
+            int pivot = 0;
+            if (low < high)
+            {
+                pivot = partition(low, high);
+                quicksort(low, pivot - 1);
+                quicksort(pivot + 1, high);
+            }
+        }
+
+        private int partition(int low, int high)
+        {
+            int x = workers[high].salary;
+            int i = low - 1;
+            for (int j = low; j < high; j++)
+            {
+                if (workers[j].salary <= x)
+                {
+                    i++;
+                    swap(i, j);
+                }
+            }
+            swap(i + 1, high);
+            return i + 1;
+
+        }
+
+        private void swap(int index1, int index2)
+        {
+            Worker swp;
+            swp = workers[index1];
+            workers[index1] = workers[index2];
+            workers[index2] = swp;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            quicksort(0, workers.Length - 1);
+            sortTable();
         }
     }
 }
