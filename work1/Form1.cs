@@ -116,6 +116,7 @@ namespace work1
 
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
+            bubbleSortLbl.Text = elapsedMs.ToString() + "ms";
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,6 +175,7 @@ namespace work1
 
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
+            quickSortLbl.Text = elapsedMs.ToString() + "ms";
         }
     }
 }

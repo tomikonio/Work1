@@ -39,6 +39,8 @@
             this.col5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.quickSortLbl = new System.Windows.Forms.Label();
+            this.bubbleSortLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -129,11 +131,31 @@
             this.col7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.col7.Width = 147;
             // 
+            // quickSortLbl
+            // 
+            this.quickSortLbl.AutoSize = true;
+            this.quickSortLbl.Location = new System.Drawing.Point(780, 485);
+            this.quickSortLbl.Name = "quickSortLbl";
+            this.quickSortLbl.Size = new System.Drawing.Size(30, 13);
+            this.quickSortLbl.TabIndex = 4;
+            this.quickSortLbl.Text = "Time";
+            // 
+            // bubbleSortLbl
+            // 
+            this.bubbleSortLbl.AutoSize = true;
+            this.bubbleSortLbl.Location = new System.Drawing.Point(497, 485);
+            this.bubbleSortLbl.Name = "bubbleSortLbl";
+            this.bubbleSortLbl.Size = new System.Drawing.Size(30, 13);
+            this.bubbleSortLbl.TabIndex = 5;
+            this.bubbleSortLbl.Text = "Time";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 523);
+            this.Controls.Add(this.bubbleSortLbl);
+            this.Controls.Add(this.quickSortLbl);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -142,6 +164,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,6 +181,8 @@
         private System.Windows.Forms.ColumnHeader col5;
         private System.Windows.Forms.ColumnHeader col6;
         private System.Windows.Forms.ColumnHeader col7;
+        private System.Windows.Forms.Label quickSortLbl;
+        private System.Windows.Forms.Label bubbleSortLbl;
     }
 }
 
