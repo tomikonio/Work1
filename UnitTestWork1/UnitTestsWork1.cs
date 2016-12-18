@@ -35,7 +35,7 @@ namespace UnitTestWork1
             
             form.addListview();
             form.bubblesort();
-            form.sortTable();
+            //form.sortTable();
             bool istrue = isorted(form.workers);
             Assert.AreEqual(true, istrue);
 
@@ -60,7 +60,9 @@ namespace UnitTestWork1
             var form = new Form1();
             form.addListview();
             form.Quicksort(0,form.workers.Length-1);
-            form.sortTable();
+            //form.sortTable();
+            bool result = isorted(form.workers);
+            Assert.IsTrue(result);
         }
     }
 }
