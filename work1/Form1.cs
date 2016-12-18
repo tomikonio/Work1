@@ -108,9 +108,14 @@ namespace work1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
             listView1.Items.Clear();
             bubblesort();
             sortTable();
+
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,9 +166,14 @@ namespace work1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
             listView1.Items.Clear();
             Quicksort(0, workers.Length - 1);
             sortTable();
+
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
         }
     }
 }
