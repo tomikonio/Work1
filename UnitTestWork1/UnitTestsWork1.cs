@@ -27,5 +27,31 @@ namespace UnitTestWork1
             }
             return count;
         }
+
+        [TestMethod]
+        public void TestBubleSort()
+        {
+            var form = new Form1();
+            
+            form.addListview();
+            form.bubblesort();
+            form.sortTable();
+            bool istrue = isorted(form.workers);
+            Assert.AreEqual(true, istrue);
+
+        }
+
+        private bool isorted(Worker[] workerArray)
+        {
+            for(int i = 0;i< workerArray.Length; i++)
+            {
+                if (i != workerArray.Length - 1)
+                {
+                    if (workerArray[i].salary > workerArray[i + 1].salary)
+                        return false;
+                }
+            }
+            return true;
+        }
     }
 }

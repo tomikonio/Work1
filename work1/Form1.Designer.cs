@@ -57,8 +57,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 121);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Bubble sort";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -79,12 +80,13 @@
             this.col5,
             this.col6,
             this.col7});
-            this.listView1.Location = new System.Drawing.Point(86, 30);
+            this.listView1.Location = new System.Drawing.Point(55, 29);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(922, 274);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // col1
             // 
@@ -137,6 +139,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
