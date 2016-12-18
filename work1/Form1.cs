@@ -30,8 +30,8 @@ namespace work1
         {
             //Random rnd = new Random();
             ListView L1 = new ListView();
-            workers = new Worker[100];
-            for (int i = 0; i<100;i++)
+            workers = new Worker[10000];
+            for (int i = 0; i<10000;i++)
             {
                 int id1 = rnd.Next(100000000,400000000);
          

@@ -13,7 +13,19 @@ namespace UnitTestWork1
             var form = new Form1();
             int expectedSize = 10000;
             form.addListview();
-            Assert.AreEqual(expectedSize, form.workers.Length);
+            int actualSize = CountArray(form.workers);
+            Assert.AreEqual(expectedSize, actualSize);
+        }
+
+        private int CountArray(Worker[] workerArray)
+        {
+            int count=0;
+            for(int i = 0; i < workerArray.Length; i++)
+            {
+                if (workerArray[i] != null)
+                    count++;
+            }
+            return count;
         }
     }
 }
